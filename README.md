@@ -21,18 +21,18 @@ But if you can, please use the form. Refer to numerous tutorials around the net 
 Copy the contents of [form](form) directory to:
 
 ```
-<drive>:/<Winlink installation directory>/Global Folders/Templates
+<drive>:\<Winlink installation directory>\Global Folders\Templates
 ```
 
 The default location is `C:\RMS Express\Global Folders\Templates` but it depends on where did you actually install Winlink.
 
 ### Installing for [Pat](https://getpat.io)
 
-Copy the contents of [form](form) directory to `~/.local/share/pat/Standard_Forms/FFWN` or put it somewhere else and point Pat at it with a command line option.
+Copy the contents of [form](form) directory to `~/.local/share/pat/Standard_Forms/FFWN` or put it somewhere else and point Pat at it with a command line option or through the configuration.
 
 ## Usage: For the net controller
 
-This repository includes a program which will automatically process form replies into a CSV file for you to publish or do statomancy on -- the primary reason for using a form is being able to automate this.
+This repository includes a program which will automatically process form replies into a CSV file for you to publish or do statomancy on -- the primary reason for using a form is being able to automate this, and this program does precisely that.
 
 The program works on XML message files exported from RMS Express, or directly on a Pat inbox. Both usages will require some familiarity with the concept of command line.
 
@@ -58,7 +58,7 @@ This will produce an `output.csv` file containing all data from the messages. If
 
 ### Working with Pat
 
-Assuming the messages are still in your inbox, and the inbbox contains no messages from *prior* checkins, you just run it like this:
+Assuming the messages are still in your inbox, and the inbox contains no messages from *prior* checkins, you just run it like this:
 
 ```bash
 ffwn-checkout pat <your callsign>
