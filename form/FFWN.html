@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta
+            http-equiv="Content-Type"
+            content="text/html; charset=iso-8859-1"
+        />
+        <title>FediFridayWinlinkNet Checkin</title>
+
+        <style>
+            label {
+                width: 10em;
+                font-weight: bold;
+                display: inline-block;
+            }
+            .inputbox {
+                width: calc(100% - 20em);
+            }
+            input.button {
+                width: 10em;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>FediFridayWinlinkNet Checkin</h1>
+        <form
+            id="FFWNCheckin"
+            method="post"
+            action="http://{FormServer}:{FormPort}"
+            enctype="multipart/form-data"
+            onsubmit="return close();"
+            name="FFWNCheckin"
+        >
+            <p>
+                <label for="Callsign">Callsign</label>
+                <input
+                    type="text"
+                    name="Callsign"
+                    class="inputbox"
+                    value="{Callsign}"
+                    required=""
+                />
+            </p>
+            <p>
+                <label for="Name">First name</label>
+                <input
+                    type="text"
+                    name="Name"
+                    class="inputbox"
+                    placeholder="First name"
+                    required=""
+                />
+            </p>
+            <p>
+                <label for="City">City</label>
+                <input
+                    type="text"
+                    name="City"
+                    class="inputbox"
+                    placeholder="City"
+                    required=""
+                />
+            </p>
+            <p>
+                <label for="Region">Region</label>
+                <input
+                    type="text"
+                    name="Region"
+                    class="inputbox"
+                    placeholder="state/province/locale of a country"
+                    required=""
+                />
+            </p>
+            <p>
+                <label for="Country">Country</label>
+                <input
+                    type="text"
+                    name="Country"
+                    class="inputbox"
+                    placeholder="Country"
+                    required=""
+                />
+            </p>
+            <p>
+                <label for="Username">Username</label>
+                <input
+                    type="text"
+                    name="Username"
+                    class="inputbox"
+                    placeholder="Full Mastodon username"
+                    required=""
+                />
+            </p>
+            <p>
+                <label for="Connection">Connection method</label>
+                <select name="Connection" class="inputbox" required="">
+                    <option value="">---</option>
+                    <option value="VHF">VHF</option>
+                    <option value="HF">HF</option>
+                    <option value="APRS">APRS</option>
+                    <option value="Telnet">Telnet</option>
+                    <option value="Other">Other</option>
+                </select>
+            </p>
+            <p>
+                <label for="Question">Answer</label>
+                <input
+                    type="text"
+                    name="Question"
+                    class="inputbox"
+                    placeholder="Freeform answer to this week's question"
+                />
+            </p>
+            <p>
+                <input
+                    class="button"
+                    type="submit"
+                    name="Submit"
+                    value="Submit"
+                />
+                <input class="button" type="reset" name="Reset" value="Reset" />
+            </p>
+        </form>
+    </body>
+</html>

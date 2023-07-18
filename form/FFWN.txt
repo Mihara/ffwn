@@ -1,0 +1,6 @@
+Form: FFWN.html
+Subject: FFWN
+Readonly:True
+Msg:
+<var Callsign>,<var Name>,<var City>,<var Region>,<var Country>,<var Username>,<var Connection>
+<var Question>
