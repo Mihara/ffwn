@@ -18,15 +18,23 @@ But if you can, please use the form. Refer to numerous tutorials around the net 
 
 ### Installing for RMS Express
 
-Copy the contents of [form](form) directory to `<drive>:/<Winlink installation directory>/Global Folders/Templates` -- by default that's `C:\RMS Express\Global Folders\Templates`
+Copy the contents of [form](form) directory to:
 
-### Installing for Pat
+```
+<drive>:/<Winlink installation directory>/Global Folders/Templates
+```
 
-Copy the contents of [form](form) directory to `~/.local/share/pat/Standard_Forms/FFWN`
+The default location is `C:\RMS Express\Global Folders\Templates` but it depends on where did you actually install Winlink.
 
-## For the net controller
+### Installing for [Pat](https://getpat.io)
 
-This repository includes a program which will automatically process form replies into a CSV file for you to publish or do statomancy on. The program works on XML message files exported from RMS Express, or directly on your Pat inbox. Both usages will require some familiarity with the concept of command line.
+Copy the contents of [form](form) directory to `~/.local/share/pat/Standard_Forms/FFWN` or put it somewhere else and point Pat at it with a command line option.
+
+## Usage: For the net controller
+
+This repository includes a program which will automatically process form replies into a CSV file for you to publish or do statomancy on -- the primary reason for using a form is being able to automate this.
+
+The program works on XML message files exported from RMS Express, or directly on a Pat inbox. Both usages will require some familiarity with the concept of command line.
 
 See `ffwn-checkout -h` for more detailed help, but the basic gist is like this:
 
@@ -59,6 +67,16 @@ ffwn-checkout pat <your callsign>
 Otherwise you need to clean up the inbox so that it does not contain messages with the subject `FFWN` that should not be processed. (All other messages will be ignored.)
 
 Just like when processing an XML file export, messages that cannot be parsed will report their message IDs so you can deal with them manually.
+
+## Installation and compilation
+
+This is a [Go](https://go.dev/) program, so this should be easy enough, provided you have a working Go 1.20 or later installation:
+
+```bash
+go install github.com/Mihara/ffwn@latest
+```
+
+But otherwise you can just take a binary file from the [latest release](https://github.com/Mihara/ffwn/releases/latest/) and put it wherever you like.
 
 ## License
 
