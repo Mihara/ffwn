@@ -4,7 +4,7 @@ WARNING: This is experimental, could use some more work, exercise caution.
 
 ## Usage: For the participants
 
-You want the contents of [form](form) directory to be installed into your Winlink client to create a message from a Winlink form. The advantage of using the form is that the resulting message is guaranteed to be machine-readable, which saves hair on the net controller. If this is impossible (like when checking in with APRS) you will have to manually format the message:
+You want the contents of [form](form) directory (specifically, [form.zip](/Mihara/ffwn/releases/latest/download/ffwn.zip)) to be installed into your Winlink client to create a message from a Winlink form. The advantage of using the form is that the resulting message is guaranteed to be machine-readable, which saves hair on the net controller. If this is impossible (like when checking in with APRS) you will have to manually format the message:
 
 ```
 To: <net controller's callsign>
