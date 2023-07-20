@@ -4,7 +4,7 @@ WARNING: This is experimental, could use some more work, exercise caution.
 
 ## Usage: For the participants
 
-You want the contents of [form](form) directory (specifically, [form.zip](https://github.com/Mihara/ffwn/releases/latest/download/ffwn.zip) - Winlink can be finicky about line endings) to be installed into your Winlink client to create a message from a Winlink form. The advantage of using the form is that the resulting message is guaranteed to be machine-readable, which saves hair on the net controller. If this is impossible (like when checking in with APRS) you will have to manually format the message:
+You want the contents of [form](form) directory *(specifically, the files in [ffwn.zip](https://github.com/Mihara/ffwn/releases/latest/download/ffwn.zip) - Winlink can be finicky about line endings in text files defining forms, and despite me trying to be explicit about them to Github, just downloading this text file from the source tree might not work for you. This zip file will.)* to be installed into your Winlink client to create a message from a Winlink form. The advantage of using the form is that the resulting message is guaranteed to be machine-readable, which saves hair on the net controller. If this is impossible (like when checking in with APRS) you will have to manually format the message:
 
 ```
 To: <net controller's callsign>
